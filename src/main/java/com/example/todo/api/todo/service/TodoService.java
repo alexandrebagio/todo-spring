@@ -1,9 +1,9 @@
-package com.example.crudSpring.api.todo.service;
+package com.example.todo.api.todo.service;
 
-import com.example.crudSpring.api.todo.dto.TodoDTO;
-import com.example.crudSpring.api.todo.mapper.TodoMapper;
-import com.example.crudSpring.api.todo.model.Todo;
-import com.example.crudSpring.api.todo.respository.TodoRepository;
+import com.example.todo.api.todo.dto.TodoDTO;
+import com.example.todo.api.todo.mapper.TodoMapper;
+import com.example.todo.api.todo.model.Todo;
+import com.example.todo.api.todo.respository.TodoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

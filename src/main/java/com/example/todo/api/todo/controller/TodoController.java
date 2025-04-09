@@ -1,15 +1,13 @@
-package com.example.crudSpring.api.todo.controller;
+package com.example.todo.api.todo.controller;
 
-import com.example.crudSpring.api.todo.dto.TodoDTO;
-import com.example.crudSpring.api.todo.model.Todo;
-import com.example.crudSpring.api.todo.service.TodoService;
+import com.example.todo.api.todo.dto.TodoDTO;
+import com.example.todo.api.todo.model.Todo;
+import com.example.todo.api.todo.service.TodoService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.validation.FieldError;
-import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;

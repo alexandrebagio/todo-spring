@@ -1,4 +1,4 @@
-package com.example.crudSpring.api.todo.model;
+package com.example.todo.api.todo.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

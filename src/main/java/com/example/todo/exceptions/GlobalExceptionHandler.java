@@ -1,4 +1,4 @@
-package com.example.crudSpring.exceptions;
+package com.example.todo.exceptions;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

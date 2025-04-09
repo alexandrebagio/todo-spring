@@ -1,4 +1,4 @@
-package com.example.crudSpring.api.todo.dto;
+package com.example.todo.api.todo.dto;
 
 import jakarta.validation.constraints.*;
 import lombok.AllArgsConstructor;
