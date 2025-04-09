@@ -21,9 +21,25 @@ public class TodoService {
         return todoRepository.findAll();
     }
 
+    public Todo findById(Long id) {
+        return todoRepository.findById(id).orElseThrow(() -> new RuntimeException("Todo not found"));
+    }
+
     public Todo create(TodoDTO todoDTO) {
         Todo todo = todoMapper.toEntity(todoDTO);
 
         return todoRepository.save(todo);
+    }
+
+    public Todo update(Long id, TodoDTO todoDTO) {
+        Todo todo = todoRepository.findById(id).orElseThrow(() -> new RuntimeException("Todo not found"));
+
+        todoMapper.updateEntity(todoDTO, todo);
+
+        return todoRepository.save(todo);
+    }
+
+    public void delete(Long id) {
+        todoRepository.deleteById(id);
     }
 }

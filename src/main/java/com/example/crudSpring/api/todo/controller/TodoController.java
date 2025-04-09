@@ -29,8 +29,27 @@ public class TodoController {
         return todoService.findAll().stream().toList();
     }
 
+    @GetMapping("{id}")
+    public Todo show(@PathVariable Long id) {
+        return todoService.findById(id);
+    }
+
     @PostMapping
     public Todo create(@Valid @RequestBody TodoDTO todo) {
         return todoService.create(todo);
+    }
+
+    @PatchMapping("{id}")
+    public Todo update(@PathVariable Long id, @Valid @RequestBody TodoDTO todo) {
+        return todoService.update(id, todo);
+    }
+
+    @DeleteMapping("{id}")
+    public ResponseEntity<Map<String, Boolean>> delete(@PathVariable Long id) {
+        todoService.delete(id);
+        Map<String, Boolean> response = new HashMap<>();
+        response.put("deleted", Boolean.TRUE);
+
+        return new ResponseEntity<>(response, HttpStatus.OK);
     }
 }
